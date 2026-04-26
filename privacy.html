@@ -9,52 +9,82 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
         .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #ff3b3b; margin-bottom: 20px; }
-        h2 { color: #ff3b3b; margin: 30px 0 15px; font-size: 24px; }
-        p, li { color: #b0b0b0; margin-bottom: 15px; }
-        ul { margin-left: 20px; margin-bottom: 20px; }
-        a { color: #ff3b3b; text-decoration: none; }
-        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; text-align: center; font-size: 12px; }
-        .last-update { color: #666; font-size: 12px; margin-bottom: 20px; }
+        h1 { color: #ff3b3b; margin-bottom: 10px; font-weight: 800; text-transform: uppercase; }
+        h2 { color: #ff3b3b; margin: 35px 0 15px; font-size: 22px; border-left: 4px solid #ff3b3b; padding-left: 15px; }
+        p, li { color: #b0b0b0; margin-bottom: 15px; font-size: 15px; }
+        ul { margin-left: 25px; margin-bottom: 20px; }
+        a { color: #ff3b3b; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        a:hover { color: #fff; text-shadow: 0 0 10px #ff3b3b; }
+        
+        /* Caja de Permisos Interactiva */
+        .permits-box { background: #1a1a1a; padding: 20px; border-radius: 12px; border: 1px solid #333; margin: 25px 0; }
+        .permit-item { display: flex; align-items: center; margin-bottom: 15px; }
+        .permit-icon { font-size: 24px; margin-right: 15px; background: #222; padding: 10px; border-radius: 8px; }
+        .permit-text b { color: #fff; display: block; }
+        .permit-text span { font-size: 13px; color: #888; }
+
+        .footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #333; text-align: center; font-size: 13px; color: #555; }
+        .last-update { color: #666; font-size: 13px; margin-bottom: 30px; font-style: italic; }
+        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #ff3b3b; color: #fff; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Política de Privacidad</h1>
-        <div class="last-update">Última actualización: 19 de abril de 2026</div>
+        <h1>Privacidad Gladiador</h1>
+        <div class="last-update">Última actualización: 26 de abril de 2026</div>
 
-        <p><strong>BJJ Timer Pro</strong> ("nosotros", "nuestro" o "la aplicación") respeta tu privacidad. Esta política explica qué información recopilamos y cómo la utilizamos.</p>
+        <p>En <strong>BJJ Timer Pro</strong>, tu honor y tu privacidad son lo primero. Esta política detalla cómo protegemos tus datos mientras conquistas el ranking de GLADIADORES.</p>
 
-        <h2>1. Información que recopilamos</h2>
+        <h2>1. Permisos de Hardware (Críticos)</h2>
+        <p>Para funcionar correctamente en el tatami, la aplicación requiere acceso a:</p>
+        
+        <div class="permits-box">
+            <div class="permit-item">
+                <div class="permit-icon">📷</div>
+                <div class="permit-text">
+                    <b>Cámara (android.permission.CAMERA)</b>
+                    <span>Utilizada exclusivamente para escanear códigos QR de otros competidores. No tomamos fotos ni grabamos video sin tu consentimiento explícito.</span>
+                </div>
+            </div>
+            <div class="permit-item">
+                <div class="permit-icon">🔔</div>
+                <div class="permit-text">
+                    <b>Notificaciones y Alarmas</b>
+                    <span>Para alertarte cuando un round finaliza o cuando recibes un nuevo reto de un gladiador.</span>
+                </div>
+            </div>
+            <div class="permit-item">
+                <div class="permit-icon">📳</div>
+                <div class="permit-text">
+                    <b>Vibración y Audio</b>
+                    <span>Esencial para el funcionamiento del Timer profesional en entornos de ruido (academias).</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>2. Información Recopilada</h2>
         <ul>
-            <li><strong>Información de autenticación:</strong> Correo electrónico y nombre (a través de Google Sign-In).</li>
-            <li><strong>Perfil de usuario:</strong> Cinturón, academia, foto de perfil (si la agregas).</li>
-            <li><strong>Datos de entrenamiento:</strong> Tiempos de lucha, rondas, resultados de combates.</li>
-            <li><strong>Datos de uso:</strong> Cómo interactúas con la aplicación (para mejorar la experiencia).</li>
+            <li><strong>Identidad:</strong> Nombre y correo vía Google/Apple Sign-In para vincular tus victorias.</li>
+            <li><strong>Perfil BJJ:</strong> Tu grado de cinta y academia para el emparejamiento justo.</li>
+            <li><strong>Estadísticas de Lucha:</strong> Historial de victorias, sumisiones y tiempo de entrenamiento.</li>
         </ul>
 
-        <h2>2. Cómo usamos tu información</h2>
-        <ul>
-            <li>Para autenticarte y gestionar tu cuenta.</li>
-            <li>Para calcular tu ranking y estadísticas en GLADIADORES.</li>
-            <li>Para mostrar tu progreso y logros.</li>
-            <li>Para mejorar la aplicación y solucionar errores.</li>
-        </ul>
+        <h2>3. Publicidad y Terceros</h2>
+        <p>Usamos <strong>Google AdMob</strong> para mantener la infraestructura gratuita. Los datos recopilados por AdMob son gestionados bajo la <a href="https://policies.google.com/technologies/ads" target="_blank">Política de Google</a>. No vendemos tu base de datos a terceros; somos luchadores, no mercaderes.</p>
 
-        <h2>3. Publicidad</h2>
-        <p>Usamos <strong>Google AdMob</strong> para mostrar anuncios. AdMob puede recopilar información sobre tu dispositivo y tu actividad para mostrarte anuncios personalizados. Puedes obtener más información en la <a href="https://policies.google.com/technologies/ads" target="_blank">Política de anuncios de Google</a>.</p>
+        <h2>4. Seguridad y Almacenamiento</h2>
+        <p>Toda la información se cifra y se almacena en <strong>Firebase (Google Cloud)</strong>. Tus datos de combate están protegidos con los estándares más altos de la industria.</p>
 
-        <h2>4. Almacenamiento de datos</h2>
-        <p>Tus datos se almacenan de forma segura en <strong>Firebase (Google Cloud)</strong>. No compartimos tus datos con terceros, excepto cuando es necesario para el funcionamiento de la aplicación (ej: AdMob para anuncios).</p>
+        <h2>5. Eliminación de Datos</h2>
+        <p>Tienes derecho a retirarte del coliseo. Puedes solicitar la eliminación total de tu cuenta y estadísticas enviando un correo desde tu dirección registrada.</p>
 
-        <h2>5. Tus derechos</h2>
-        <p>Puedes solicitar la eliminación de tus datos contactándonos. También puedes cerrar tu sesión y eliminar la aplicación en cualquier momento.</p>
+        <h2>6. Contacto Técnico</h2>
+        <p>Dudas sobre el código o tus datos: <a href="mailto:luimike001@gmail.com">luimike001@gmail.com</a></p>
 
-        <h2>6. Contacto</h2>
-        <p>Si tienes preguntas sobre esta política, contáctanos en: <a href="mailto:luimike001@gmail.com">luimike001@gmail.com</a></p>
+        <a href="index.html" class="btn-back">VOLVER AL INICIO</a>
 
         <div class="footer">
-            <p>&copy; 2026 BJJ Timer Pro. Todos los derechos reservados.</p>
+            <p>&copy; 2026 BJJ Timer Pro | JLDynamics. Todos los derechos reservados.</p>
         </div>
     </div>
 </body>
