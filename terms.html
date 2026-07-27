@@ -3,44 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - BJJ Timer Pro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Términos y Condiciones - BJJ Timer Pro | JLDynamics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-main: #05050A;
+            --bg-card: rgba(10, 10, 16, 0.7);
+            --border-glow: rgba(0, 229, 255, 0.15);
+            --primary: #00E5FF;
+            --secondary: #7000FF;
+            --text-main: #F3F4F6;
+            --text-muted: #9CA3AF;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #ff3b3b; margin-bottom: 20px; }
-        h2 { color: #ff3b3b; margin: 30px 0 15px; font-size: 24px; }
-        p { color: #b0b0b0; margin-bottom: 15px; }
-        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; text-align: center; font-size: 12px; }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-main);
+            background-image: 
+                radial-gradient(circle at 90% 20%, rgba(112, 0, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 10% 80%, rgba(0, 229, 255, 0.04) 0%, transparent 40%);
+            color: var(--text-main); 
+            line-height: 1.7; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 80px 24px; }
+        
+        .header-block {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .brand-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(0, 229, 255, 0.06);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        h1 { 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800; 
+            font-size: 38px; 
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #FFF 30%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .last-update { color: var(--text-muted); font-size: 13px; font-style: italic; }
+
+        .intro-text {
+            font-size: 16px;
+            color: #E5E7EB;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--primary);
+            border-radius: 4px 12px 12px 4px;
+        }
+
+        h2 { 
+            font-family: 'Montserrat', sans-serif;
+            color: #FFF; 
+            margin: 45px 0 20px; 
+            font-size: 20px; 
+            font-weight: 700; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        p, li { color: var(--text-muted); margin-bottom: 16px; font-size: 15px; }
+        ul { margin-left: 24px; margin-bottom: 24px; }
+        li { margin-bottom: 8px; }
+        strong { color: #FFF; font-weight: 600; }
+        
+        a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600; 
+            transition: all 0.2s ease;
+            border-bottom: 1px dashed rgba(0, 229, 255, 0.3);
+        }
+        a:hover { 
+            color: #FFF; 
+            border-bottom-color: #FFF;
+            text-shadow: 0 0 12px rgba(0, 229, 255, 0.5); 
+        }
+        
+        /* Caja de Alerta Legal / Descargo de Responsabilidad */
+        .disclaimer-box { 
+            background: var(--bg-card); 
+            padding: 25px; 
+            border-radius: 16px; 
+            border: 1px solid rgba(231, 76, 60, 0.3); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            margin: 30px 0; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .disclaimer-item { display: flex; align-items: flex-start; }
+        .disclaimer-icon { 
+            font-size: 20px; 
+            margin-right: 18px; 
+            background: rgba(231, 76, 60, 0.05); 
+            padding: 12px; 
+            border-radius: 10px; 
+            border: 1px solid rgba(231, 76, 60, 0.2); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .disclaimer-text b { color: #E74C3C; display: block; font-size: 16px; margin-bottom: 4px; font-weight: 700; text-transform: uppercase; }
+        .disclaimer-text span { font-size: 14px; color: var(--text-muted); display: block; line-height: 1.6; }
+
+        /* Botón de Retorno Fluido */
+        .btn-container { text-align: center; margin-top: 60px; }
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px; 
+            background: linear-gradient(135deg, var(--primary), #0099FF); 
+            color: #05050A; 
+            border-radius: 12px; 
+            font-weight: 700; 
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0, 229, 255, 0.25);
+            cursor: pointer;
+        }
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 229, 255, 0.45);
+            border-color: rgba(255,255,255,0.4);
+            color: #05050A;
+        }
+
+        .footer { 
+            margin-top: 80px; 
+            padding-top: 30px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.05); 
+            text-align: center; 
+            font-size: 13px; 
+            color: #4B5563; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Términos y Condiciones</h1>
-        
-        <p>Al descargar y usar <strong>BJJ Timer Pro</strong>, aceptas cumplir con estos términos.</p>
+        <div class="header-block">
+            <div class="brand-badge">Marco Legal JLDynamics</div>
+            <h1>Términos de Servicio</h1>
+            <div class="last-update">Última actualización: 26 de junio de 2026</div>
+        </div>
 
-        <h2>1. Uso de la aplicación</h2>
-        <p>La aplicación es para uso personal y no comercial. No está permitido modificar, copiar o distribuir el código de la aplicación.</p>
+        <div class="intro-text">
+            Al descargar, instalar o utilizar la aplicación móvil <strong>BJJ Timer Pro</strong>, aceptas de forma explícita quedar vinculado por los presentes Términos y Condiciones establecidos de forma global por la firma de desarrollo JLDynamics.
+        </div>
 
-        <h2>2. Cuenta de usuario</h2>
-        <p>Eres responsable de mantener la seguridad de tu cuenta. No compartas tus credenciales con nadie.</p>
+        <h2>1. Licencia de Uso Limitada</h2>
+        <p>JLDynamics te otorga una licencia revocable, no exclusiva, intransferible y limitada para descargar, instalar y utilizar la aplicación estrictamente para fines de entrenamiento personal y gestión deportiva. Queda rotundamente prohibido:</p>
+        <ul>
+            <li>Realizar ingeniería inversa, descompilar o intentar extraer el código fuente del software desarrollado en Dart/Flutter.</li>
+            <li>Modificar, traducir, adaptar o crear obras derivadas basadas en las marcas o la interfaz lógica de la plataforma.</li>
+            <li>Distribuir el archivo ejecutable (.apk o .aab) a través de repositorios paralelos o tiendas no oficiales.</li>
+        </ul>
 
-        <h2>3. Sistema GLADIADORES</h2>
-        <p>Los resultados de los combates deben ser honestos. El sistema tiene validación anti-fraude y resultados inconsistentes pueden llevar a la suspensión de tu cuenta.</p>
+        <h2>2. Gestión y Seguridad de la Cuenta</h2>
+        <p>Para acceder al sistema de emparejamiento, el usuario debe autenticarse a través de proveedores autorizados. Eres el único responsable de la actividad que ocurra en tu cuenta y de mantener a salvo tus credenciales lógicas de acceso. JLDynamics no se hace responsable por pérdidas originadas por accesos no autorizados de terceros a tus perfiles vinculados.</p>
 
-        <h2>4. Compras</h2>
-        <p>La versión PRO es de pago único. No se ofrecen reembolsos después de la compra, a menos que lo exija la ley aplicable.</p>
+        <h2>3. Código de Honor del Sistema GLADIADORES</h2>
+        <p>La plataforma integra algoritmos automáticos avanzados y telemetría de verificación anti-fraude para mantener el juego limpio en el ranking global. El registro de resultados falsificados, sumisiones ficticias o el abuso deliberado del sistema P2P resultará en la **suspensión inmediata y de por vida** de la cuenta del infractor, bloqueando su identificador único de dispositivo de forma permanente de nuestras bases de datos centralizadas.</p>
 
-        <h2>5. Modificaciones</h2>
-        <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios serán notificados a través de la aplicación.</p>
+        <div class="disclaimer-box">
+            <div class="disclaimer-item">
+                <div class="disclaimer-icon">⚠️</div>
+                <div class="disclaimer-text">
+                    <b>Cláusula de Exención de Responsabilidad Física</b>
+                    <span>El Brazilian Jiu-Jitsu, Grappling y las artes marciales en general son deportes de contacto que conllevan un riesgo intrínseco de lesiones. BJJ Timer Pro es exclusivamente una herramienta digital de medición cronométrica. JLDynamics no asume responsabilidad civil ni penal por lesiones físicas, daños a la salud, accidentes o fatalidades ocurridas en el tatami durante el uso del temporizador. El entrenamiento se ejecuta bajo la total responsabilidad de los atletas y de la academia respectiva.</span>
+                </div>
+            </div>
+        </div>
 
-        <h2>6. Contacto</h2>
-        <p><a href="mailto:luimike001@gmail.com">luimike001@gmail.com</a></p>
+        <h2>4. Transacciones, Licencias PRO y Reembolsos</h2>
+        <p>El acceso a las métricas avanzadas y configuraciones especiales de campeonato se adquiere bajo la modalidad de pago único a través de las pasarelas oficiales de Google Play Billing y Apple In-App Purchase. De conformidad con las políticas de distribución de software y desarrollo independiente, todas las transacciones son finales y no se otorgarán reembolsos directos, salvo en aquellos escenarios donde las normativas locales vigentes de protección al consumidor exijan lo contrario.</p>
+
+        <h2>5. Propiedad Intelectual</h2>
+        <p>Todos los derechos de propiedad intelectual del software, códigos del motor de tiempo, diseños de interfaz, logotipos, imagotipos y marcas pertenecen única y exclusivamente a la marca JLDynamics. El uso de la aplicación no transfiere derecho de explotación comercial alguno sobre la marca.</p>
+
+        <h2>6. Modificación de las Condiciones</h2>
+        <p>Nos reservamos la facultad legal de actualizar o modificar estas directrices contractuales en cualquier momento para adaptarlas a nuevas regulaciones internacionales o arquitecturas del sistema. Las modificaciones significativas se comunicarán mediante actualizaciones en la landing page o notificaciones push internas. El uso continuado del software constituirá la aceptación de los nuevos términos.</p>
+
+        <h2>7. Jurisdicción y Contacto Legal</h2>
+        <p>Para resolver cualquier discrepancia legal relacionada con la interpretación de este documento o reportar fallas críticas de seguridad, el canal centralizado de comunicación oficial es el correo del desarrollador: <a href="mailto:lu.violencia@gmail.com">lu.violencia@gmail.com</a>.</p>
+
+        <div class="btn-container">
+            <a href="index.html" class="btn-back">← Volver al Inicio</a>
+        </div>
 
         <div class="footer">
-            <p>&copy; 2026 BJJ Timer Pro. Todos los derechos reservados.</p>
+            <p>&copy; 2026 BJJ Timer Pro | JLDynamics. Todos los derechos reservados. Ambato, Ecuador.</p>
         </div>
     </div>
 </body>
